@@ -1,0 +1,12 @@
+Class category
+
+Property 
+   - name
+   - pic.
+   - url
+   - height
+   - width
+
+Action
+   - click then height+width changes
+   - click and pic disapear
