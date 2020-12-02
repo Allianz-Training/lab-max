@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let num = prompt("sai lek: ")*1;
+    let star = '';
+    function methoddraw_1(num){
+        for(let i = 0; i <num; i++){
+            star += "*\n";
+        }
+        alert(star);
+    }
+    function methoddraw_2(num){
+        for(let i = 0; i<num; i++){
+            for(let j = 0; j < num; j++){
+                star += '*';
+            }
+            star += "\n";
+        }
+        alert(star);
+    }
+    function methoddraw_3(num){
+        for(let i = 0; i<num; i++){
+            for(let j = 0; j < num; j++){
+                star += j+1;
+            }
+            star += "\n";
+        }
+        alert(star);
+    }
+    function methoddraw_4(num){
+        for(let i = 0; i<num; i++){
+            for(let j = 0; j < num; j++){
+                star += i+1;
+            }
+            star += "\n";
+        }
+        alert(star);
+    }
+    function methoddraw_5(num){
+        for(let i = 0; i<num; i++){
+            for(let j = 0; j < num; j++){
+                star += num-i;
+            }
+            star += "\n";
+        }
+        alert(star);
+    }
+
+    function methoddraw_6(num){
+        for(let i = 1; i<=num; i++){
+            for(let j = 1+num*(i-1); j <= num*i; j++){
+                star += j;
+            }
+            star += "\n";
+        }
+        alert(star);
+    }
+
+    function methoddraw_7(num){
+        for(let i = 1; i<=num; i++){
+            for(let j = 1+num*(i-1); j <= num*i; j++){
+                star += (num*num)-j+1;
+            }
+            star += "\n";
+        }
+        alert(star);
+    }
+
+    function methoddraw_8(num){
+        for(let i = 0; i<num; i++){
+            star += i*2;
+            star += "\n";
+        }
+        alert(star);
+    }
+
+    function methoddraw_9(num){
+        for(let i = 0; i<num; i++){
+            star += (i+1)*2;
+            star += "\n";
+        }
+        alert(star);
+    }
+
+    function methoddraw_10(num){
+        for(let i = 0; i<num; i++){
+            for(let j=1;j<=num;j++){
+                star += j*(i+1);
+            }
+            star += "\n";
+        }
+        alert(star);
+    }
+
+    function methoddraw_11(num){
+        for(let i = 1; i<=num; i++){
+            for(let j=1;j<=num;j++){
+                if (i==j){
+                    star += "_";
+                }else{
+                    star += "*";
+                }
+            }
+            star += "\n";
+        }
+        alert(star);
+    }
+
+    function methoddraw_12(num){
+        for(let i = 1; i<=num; i++){
+            for(let j=1;j<=num;j++){
+                console.log(i+j)
+                if ((i+j) == num+1){
+                    star += "_";
+                }else{
+                    star += "*";
+                }
+            }
+            star += "\n";
+        }
+        alert(star);
+    }
+
+    function methoddraw_13(num){
+        for(let i = 1; i<=num; i++){
+            for(let j=1;j<=num;j++){
+                if (i<j){
+                    star += "_";
+                }else{
+                    star += "*"
+                }
+            }
+            star += "\n";
+        }
+        alert(star);
+    }
+
+    function methoddraw_17(num){
+        for(let i = 1; i<=num; i++){
+            for(let j=1;j<=num;j++){
+                if (num-i+1>j){
+                    star += "_";
+                }else{
+                    star += "*"
+                }
+            }
+            star += "\n";
+        }
+        alert(star);
+    }
+
+    function methoddraw_14(num){
+        for(let i = 1; i<=num; i++){
+            for(let j=1;j<=num;j++){
+                if (num-i+2 <= j){
+                    star += "_";
+                }else{
+                    star += "*";
+                }
+            }
+            star += "\n";
+        }
+        alert(star);
+    }
+
+    function methoddraw_15(num){
+        for(let i = 1; i<=(num*2)-1; i++){
+            for(let j=1;j<=num;j++){
+                if (j <= num - Math.abs(num-i)){
+                    star += "*";
+                }else{
+                    star += "_";
+                }
+            }
+            star += "\n";
+        }
+        alert(star);
+    }
+
+    function methoddraw_18(num){
+        for(let i = 1; i<=num; i++){
+            for(let j=1;j<=num;j++){
+                if (i>j){
+                    star += "_";
+                }else{
+                    star += "*"
+                }
+            }
+            star += "\n";
+        }
+        alert(star);
+    }
+
+    function methoddraw_19(num){
+        for(let i = 1; i<=(num*2)-1; i++){
+            for(let j=1;j<=num;j++){
+                if (j <= Math.abs(num-i)){
+                    star += "_";
+                }else{
+                    star += "*";
+                }
+            }
+            star += "\n";
+        }
+        alert(star);
+    }
+
+    function methoddraw_20(num){
+        let numb = 1
+        for(let i = 1; i<=(num*2)-1; i++){
+            for(let j=1;j<=num;j++){
+                if (j <= Math.abs(num-i)){
+                    star += "_";
+                }else{
+                    star += numb;
+                    numb += 1;
+                }
+            }
+            star += "\n";
+        }
+        alert(star);
+    }
+
+    function methoddraw_21(num){
+        for(let i = 1; i<= num; i++){
+            for(let j=1;j<=(num*2)-1;j++){
+                if (Math.abs(num-j)>=i){
+                    star += "_";
+                }else{
+                    star += "*";
+                }
+            }
+            star += "\n";
+        }
+        alert(star);
+    }
+
+
+    function methoddraw_22(num){
+        for(let i = 1; i<= num; i++){
+            for(let j=1;j<=(num*2)-1;j++){
+                if (Math.abs(num-j)<i-1){
+                    star += "_";
+                }else{
+                    star += "*";
+                }
+            }
+            star += "\n";
+        }
+        alert(star);
+    }
+
+    function methoddraw_23(num){
+        for(let i = 0; i< (num*2)-1; i++){
+            for(let j=0;j<(num*2)-1;j++){
+                if (i+j < num-1 || j-i >= num || i-j >= num || i+j >= (num * 3) -2){
+                    star += "_";
+                }else{
+                    star += "*";
+                }
+            }
+            star += "\n";
+        }
+        alert(star);
+    }
+
+    function methoddraw_24(num){
+        let numb = 1
+        for(let i = 0; i< (num*2)-1; i++){
+            for(let j=0;j<(num*2)-1;j++){
+                if (i+j < num-1 || j-i >= num || i-j >= num || i+j >= (num * 3) -2){
+                    star += "_";
+                }else{
+                    star += numb;
+                    numb += 1;
+                }
+            }
+            star += "\n";
+        }
+        alert(star);
+    }
+    methoddraw_12(num);
+    </script>
+</body>
+</html>

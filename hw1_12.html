@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*let string = "max";
+        string = string[0].toUpperCase()+string.slice(1);
+        alert(string);
+
+        function checkSpam(string){
+            alert(string.includes("xxx")||string.includes("viagra"))
+        }
+        checkSpam("xxxasdacascewc");
+
+        function truncate(str,maxlength){
+            if (str.length > maxlength){
+                str2 = str.slice(0,maxlength) +'...';
+            } else{
+                str2 = str;
+            }
+            alert(str2);
+        }
+        truncate("12344tyhfddgghxrnddjmghmtdu6mtunj",5)
+        */
+
+        function hw4_10_1_1(){
+            let array1 = [1,2,30,100];
+            let array2 = array1.map(val => val*2);
+            console.log(array2);
+        }
+       
+
+        function hw4_10_1_2(){
+            let array1 = [1,2,3,4];
+            let array2 = array1.map(val => val.toString());
+            console.log(array2);
+        }
+
+        function hw4_10_1_3(){
+            let array1 = [1,"1",2,{}];
+            let array2 = array1.map(val => typeof(val));
+            console.log(array2);
+        }
+
+        function hw4_10_1_4(){
+            let array1 = ["apple", "banana", "orange"];
+            let array2 = array1.map(val => val.toUpperCase());
+            console.log(array2);
+        }
+
+        function hw4_10_1_5(){
+            let array1 = [{name: "apple", age: 14},{name: "banana", age: 18}, {name: "watermelon", age: 32}];
+            let array2 = array1.map(val => val.name);
+            console.log(array2);
+        }
+
+        function hw4_10_1_6(){
+            let array1 = [{name: "apple", age: 14},{name: "banana", age: 18}, {name: "watermelon", age: 32}];
+            let array2 = array1.map(val => val.age);
+            console.log(array2);
+        }
+
+        function hw4_10_1_7(){
+            let array1 = [{name: "apple", surname: "London"},{name: "banana", surname:"London"},{name:"watermelon", surname:"Singapore"}]
+            let array2 = array1.map(val => val.name+" "+val.surname);
+            console.log(array2);
+        }
+
+        function hw4_10_1_8(){
+            let array1 = [1,3,4,5,6,7,8];
+            let array2 = array1.map(val => {
+                if(val %2 == 0){
+                    return "even"
+                }else{
+                    return "odd"
+                }
+            })
+            console.log(array2);
+        }
+
+        function hw4_10_1_9(){
+            let array1 = [1,-3,2,8,-4,5];
+            let array2 = array1.map(val =>{
+                if( val < 0){
+                    return val*-1
+                } else{
+                    return val
+                }
+            })
+            console.log(array2)
+        }
+
+        function hw4_10_1_10(){
+            let array1 = [100,200.25,300.84, 400.3];
+            let array2 = array1.map(val => val.toFixed(2));
+            console.log(array2);
+        }
+
+        function hw4_10_1_11(){
+            let array1 = [{name:"apple", birth:"2000-01-01"},{name:"banana", birth: "1990-10-01"},{name:"watermelon", birth:"1985-12-01"}];
+            let array2 = array1.map(val => {val.age = "2020"-val.birth.slice(0,4);
+            return val});
+            console.log(array2);
+        }
+        
+        function hw4_10_1_12(){
+            let array1 = [{name:"apple", birth:"2000-01-01"},{name:"banana", birth: "1990-10-01"},{name:"watermelon", birth:"1985-12-01"}];
+            let array2 = array1.map(val => "<tr></td>"+val.name+"</td><td>"+val.birth+"</td></tr>");
+            console.log(array2);
+        }
+        function hw4_10_2_1(){
+            let array1 = [1,2,30,400];
+            let array2 = array1.filter(val => val > 10);
+            console.log(array2);
+        }
+
+        function hw4_10_2_2(){
+            let array1 = [1, 2, 3, 4];
+            let array2 = array1.filter(val => {
+                if (val % 2 != 0){
+                    return val
+                }
+            })
+            console.log(array2)
+        }
+
+        function hw4_10_2_3(){
+            let array1 = [1,"1",2,{}];
+            let array2 = array1.filter(val => {
+                if (typeof(val) == "number"){
+                    return val
+                }
+            })
+            console.log(array2)
+        }
+
+        function hw4_10_2_4(){
+            let array1 = ["apple", "banana", "orange","pineapple", "watermeon"];
+            let array2 = array1.filter(val => {
+                if(val.length > 6){
+                    return val;
+                }
+            })
+            console.log(array2)
+        }
+
+        function hw4_10_2_5(){
+            let array1 = [{name:"apple",age: 14},{name:"banana",age:18},{name:"watermelon",age:32},{name:"pineapple",age:16},{name:"peach", age:24}];
+            let array2 = array1.filter(val => {
+                if(val.age < 18){
+                    return val
+                }
+            })
+            console.log(array2)
+        }
+
+        function hw4_10_2_6(){
+            let array1 = [{name:"apple",age: 14},{name:"banana",age:18},{name:"watermelon",age:32},{name:"pineapple",age:16},{name:"peach", age:24}];
+            let array2 = array1.filter(val => {
+                if(val.age != 32){
+                    return val
+                }
+            })
+            console.log(array2)
+        }
+        
+        function hw4_10_2_11(){
+            let array1 = [{name:"apple", birth:"2001-01-01"},{name:"banana",birth:"1990-10-10"},{name:"watermelon",birth:"1985-12-30"},{name:"peach", birth:"2002-10-13"}];
+            let array2 = array1.filter(val => {
+                if(val.birth.slice(5,7) == 10){
+                    return val
+                }
+            })
+            console.log(array2)
+        }
+
+        
+        function hw4_10_2_12(){
+            let array1 = [{name:"apple", birth:"2001-01-01"},{name:"banana",birth:"1990-10-10"},{name:"watermelon",birth:"1985-12-30"},{name:"peach", birth:"2002-10-13"}];
+            let array2 = array1.filter(val => {
+                if(val.birth.slice(0,4) < 2000){
+                    return val
+                }
+            })
+            console.log(array2)
+        }
+
+        hw4_10_2_12();
+    </script>
+</body>
+</html>
