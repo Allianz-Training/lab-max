@@ -1,0 +1,18 @@
+<app-task
+    *ngFor="let t of tasks"
+    [task] = 't'
+    (OnDelete) = "deletenow($event)"
+    (OnSelect) = "selectNow($event)"
+></app-task>
+<div
+ style="width:400px;border: 1px solid gray;text-align: center;"
+>
+<h3 style="float: left;">Add task</h3><br><br>
+Task: <input [(ngModel)] = "inname" /><br>
+Description: <input [(ngModel)] = "indesc" />
+<button (click) = "addTask()" style="float: right;">Add</button>
+</div>
+<div  style="width:400px;border: 1px solid gray;text-align: center;">
+    <h3 style="float: left;">Description</h3>
+    {{cuTask}} {{cuDesc}}
+</div>
